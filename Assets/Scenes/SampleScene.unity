@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &625916504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625916506}
+  - component: {fileID: 625916505}
+  m_Layer: 0
+  m_Name: Main
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &625916505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625916504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b48e084b3f61c42a43188de7342551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 990420323}
+--- !u!4 &625916506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625916504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1162467, y: 2.2705727, z: -6.723655}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,8 +355,8 @@ GameObject:
   - component: {fileID: 990420326}
   - component: {fileID: 990420325}
   - component: {fileID: 990420324}
-  - component: {fileID: 990420323}
   - component: {fileID: 990420322}
+  - component: {fileID: 990420323}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -334,7 +378,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &990420323
 MonoBehaviour:
@@ -345,10 +389,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 990420321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 628b4ac68f2f74544bc5b4e050fb019f, type: 3}
+  m_Script: {fileID: 11500000, guid: baa908dc3387adb498ef36a0c68a8f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  _transform: {fileID: 990420327}
+  _rb: {fileID: 990420322}
+  _speed: 3
+  _health: 100
+  _isDead: 0
 --- !u!135 &990420324
 SphereCollider:
   m_ObjectHideFlags: 0
